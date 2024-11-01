@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirection...</title>
+    <script>
+        const currentUrl = new URL(window.location.href);
+        
+        // Ambil nilai parameter dari URL asli, jika ada
+        const sub1 = currentUrl.searchParams.get("sub1") || "";
+        const sub2 = currentUrl.searchParams.get("sub2") || "";
+        const campaignId = currentUrl.searchParams.get("campaign_id") || "";
+        const clickId = currentUrl.searchParams.get("click_id") || "";
+
+        // Buat URL pengalihan dengan menyertakan semua parameter yang diperlukan
+        const redirectUrl = `https://geniusdexchange.com/jump/next.php?r=8874090&sub1=${sub1}&sub2=${sub2}&campaign_id=${campaignId}&click_id=${clickId}`;
+        
+        // Redirect ke URL baru
+        window.location.href = redirectUrl;
+    </script>
+</head>
+<body>
+</body>
+</html>
